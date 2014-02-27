@@ -1,4 +1,4 @@
-﻿@rowHeight: 50px;
+﻿@rowHeight: 60px;
 
 .table {
 	border-top: 1px solid #000;
@@ -7,6 +7,7 @@
 
 	.row {
 		border-bottom: 1px solid #000;
+		//display: table;
 		height: @rowHeight;
 		letter-spacing: -0.25em;
 		width: 100%;
@@ -14,11 +15,11 @@
 		.col {
 			border-right: 1px solid #000;
 			display: inline-block;
-			height: calc(~'100% - 6px');
+			height: calc(~'100% - 10px');
 			letter-spacing: normal;
-			line-height: @rowHeight;
-			padding: 3px;
-			width: calc(~'20% - 7px');
+			line-height: @rowHeight - 10px;
+			padding: 5px;
+			width: calc(~'20% - 11px');
 
 			&.title {
 				font-weight: bold;
@@ -32,15 +33,35 @@
 				}
 			}
 
+			&.content {
+				text-align: center;
+			}
+
 			&.total {
 				color: #F00;
 				font-weight: bold;
 				text-align: center;
-			}				
+			}
 
-			span.text {
-				display: inline-block;
-				vertical-align: middle;
+			.cell {
+				height: 100%;
+				width: 100%;
+				position: relative;
+
+				span {				
+					&.price {
+						display: block;
+						font-size: 0.7em;
+						line-height: normal;
+						position: absolute;
+						right: 0px;
+						top: 0px;
+					}
+
+					&.text {
+						text-align: center;
+					}
+				}
 			}
 		}
 	}
