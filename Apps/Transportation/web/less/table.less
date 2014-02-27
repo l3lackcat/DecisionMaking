@@ -1,0 +1,47 @@
+﻿@rowHeight: 50px;
+
+.table {
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	width: 500px;
+
+	.row {
+		border-bottom: 1px solid #000;
+		height: @rowHeight;
+		letter-spacing: -0.25em;
+		width: 100%;
+
+		.col {
+			border-right: 1px solid #000;
+			display: inline-block;
+			height: calc(~'100% - 6px');
+			letter-spacing: normal;
+			line-height: @rowHeight;
+			padding: 3px;
+			width: calc(~'20% - 7px');
+
+			&.title {
+				font-weight: bold;
+
+				&.halign-center {
+					text-align: center;
+				}
+
+				&.halign-right {
+					text-align: right;
+				}
+			}
+
+			&.total {
+				color: #F00;
+				font-weight: bold;
+				text-align: center;
+			}				
+
+			span.text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}
