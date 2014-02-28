@@ -21,28 +21,6 @@
 			padding: 5px;
 			width: calc(~'20% - 11px');
 
-			&.title {
-				font-weight: bold;
-
-				&.halign-center {
-					text-align: center;
-				}
-
-				&.halign-right {
-					text-align: right;
-				}
-			}
-
-			&.content {
-				text-align: center;
-			}
-
-			&.total {
-				color: #F00;
-				font-weight: bold;
-				text-align: center;
-			}
-
 			.cell {
 				height: 100%;
 				width: 100%;
@@ -63,6 +41,34 @@
 					}
 				}
 			}
+
+			&.title {
+				font-weight: bold;
+
+				span.price { display: none; }
+
+				&.halign-center {
+					text-align: center;
+				}
+
+				&.halign-right {
+					text-align: right;
+				}
+			}
+
+			&.content {
+				text-align: center;
+
+				span.price { display: block; }
+			}
+
+			&.total {
+				color: #F00;
+				font-weight: bold;
+				text-align: center;
+
+				span.price { display: none; }
+			}			
 		}
 	}
 }

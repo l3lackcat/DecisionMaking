@@ -1,0 +1,10 @@
+﻿<div class="table">
+	<div class="row" ng-repeat="row in rows">
+		<div ng-repeat="column in row.columns" class="col {{column.type}} {{column.alignment}}">
+			<div class="cell">
+				<span class="price" ng-show="column.price != ''">{{column.price}}</span>
+				<span class="text">{{column.text}}</span>
+			</div>
+		</div>
+	</div>
+</div>

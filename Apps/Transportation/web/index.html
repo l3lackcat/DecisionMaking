@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TransportationApp">
 	<head>
 	    <title>Transportation</title>
 
@@ -11,9 +11,20 @@
         <script type="text/javascript" src="libs/angular/angular-route.min.js"></script>
         <script type="text/javascript" src="libs/less/1.5.0/less-1.5.0.min.js"></script>
         <script type="text/javascript" src="libs/underscore/1.5.2/underscore.min.js"></script>
+
+        <!-- Closure -->
+        <script type="text/javascript" src="libs/closure/goog/base.js"></script>
+        <script type="text/javascript" src="libs/closure/goog/deps.js"></script>
+
+        <script>
+            goog.require('Transportation.App');
+        </script>
 	</head>
 	<body>
-		<div class="table">
+
+		<my-table data-row-count="5" data-column-count="5"></my-table>
+
+		<!-- <div class="table">
 			<div class="row">
 				<div class="col title">
 					<div class="cell">
@@ -55,11 +66,13 @@
 				</div>
 				<div class="col content">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">&nbsp;</span>
 					</div>
 				</div>
 				<div class="col content">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">&nbsp;</span>
 					</div>
 				</div>
@@ -77,21 +90,25 @@
 				</div>
 				<div class="col content">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">&nbsp;</span>
 					</div>
 				</div>
 				<div class="col content">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">&nbsp;</span>
 					</div>
 				</div>
 				<div class="col content">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">&nbsp;</span>
 					</div>
 				</div>
 				<div class="col total">
 					<div class="cell">
+						<span class="price">$100</span>
 						<span class="text">100</span>
 					</div>
 				</div>
@@ -150,6 +167,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</body>
 </html>
