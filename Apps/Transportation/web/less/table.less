@@ -3,11 +3,9 @@
 .table {
 	border-top: 1px solid #000;
 	border-left: 1px solid #000;
-	width: 500px;
 
 	.row {
 		border-bottom: 1px solid #000;
-		//display: table;
 		height: @rowHeight;
 		letter-spacing: -0.25em;
 		width: 100%;
@@ -19,7 +17,7 @@
 			letter-spacing: normal;
 			line-height: @rowHeight - 10px;
 			padding: 5px;
-			width: calc(~'20% - 11px');
+			width: 89px;
 
 			.cell {
 				height: 100%;
@@ -29,7 +27,7 @@
 				span {				
 					&.price {
 						display: block;
-						font-size: 0.7em;
+						font-size: 0.65em;
 						line-height: normal;
 						position: absolute;
 						right: 0px;
@@ -64,6 +62,14 @@
 
 			&.total {
 				color: #F00;
+				font-weight: bold;
+				text-align: center;
+
+				span.price { display: none; }
+			}
+
+			&.grand-total {
+				color: #00F;
 				font-weight: bold;
 				text-align: center;
 
